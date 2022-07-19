@@ -38,15 +38,18 @@
       const calcButton = document.getElementById("calc");
       calcButton.addEventListener("click", () => {
         const danInput = document.getElementById("dan-input");
-        const nowDan = document.getElementById("now-dan");
-        const output = document.getElementsByClassName("output");
         const dan = danInput.value;
         danInput.value = "";
 
+        const nowDan = document.getElementById("now-dan");
         nowDan.innerHTML = `${dan}단`;
+
+        const output = document.getElementsByClassName("output");
+
         output[0].innerText = "";
         for (let i = 1; i <= 9; i++) {
           output[0].innerHTML += `${dan} x ${i} = ${dan * i}<br>`;
+          // output[0].innerHTML = output[0].innerHTML + `${dan} x ${i} = ${dan * i}<br>` 윗줄은 축약해서 적은 것;
         }
       });
 
@@ -75,5 +78,25 @@
         }
       }
     </script>
+
+    <!-- document.getElementById 돔요소에서 ID를 검색해서 가져온다 -->
+
+    <!-- addEventListener 작동 시키는 속성 -->
+
+    <!-- () => {} 화살표 함수. 함수를 간단하게 선언할때 사용 -->
+
+    <!-- danInput.value 입력창에 들어가는 값 -->
+
+    <!-- const danInput = document.getElementById("dan-input");
+    const dan = danInput.value;
+    danInput.value = "";
+    값을 저장하고, 입력창에 적은 값을 없애준다 -->
+
+    <!-- innerHTML은 보안요소에 문제가 생길 수 있음 HTML요소에 접근. innerText랑 비슷하다 -->
+
+    <!-- 첫번째로 오는 클래스에 적용할때 [0]를 적어줌 -->
+    <!-- 프로그래밍은 0부터 시작한다 -->
+
+    <!-- output[0].innerText = ""; 내용을 추가해주기 전에 초기화를 시켜줌 -->
   </body>
 </html>
