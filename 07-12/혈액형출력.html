@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        당신의 혈액형은 <span class="blood-type"></span>형 입니다.
+    </p>
+
+    <script>
+        var bloodType = document.querySelector('.blood-type');
+        var input = prompt('당신의 혈액형은 무엇인가요');
+
+        bloodType.innerText = input;
+
+        // 같은 클래스가 있을때 querySelector('.클래스') 맨 위에 가장 먼저 적힌 클래스에만 적용된다.
+    </script>
+</body>
+</html>

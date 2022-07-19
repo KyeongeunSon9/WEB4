@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 200px;
+            height: 500px;
+            background-color: antiquewhite;
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding: 32px;
+        }
+
+        .now-dan {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <label for="">몇 단 출력할까요?</label>
+    <input id="dan-input" type="text">
+    <button id="calc">출력</button>
+
+    <div class="container">
+        <h2 class="now-dan">2</h2>
+        <p class="output">11</p>
+    </div>
+
+    <script>
+        const calcButton = document.getElementById('calc');
+        calcButton.addEventListener('click', ()=> {
+            const danInput = document.getElementById('dan-input');
+            const dan = danInput.value;
+            danInput.value = "";
+
+            console.log(dan);
+        })
+
+
+
+        function 세트로실행() {
+            intro();
+            구구단();
+        }
+        // 함수 안에 함수 넣어서 같이 실행할 수 있다
+        // 함수는 자바스크립트에서 맨 위나 맨 아래에 몰아서 적는다
+
+        function 구구단() {
+            let dan = prompt(`몇 단을 출력할까요?`);
+
+            for(let i = 1; i <=9; i++) {
+                console.log(`${dan} x ${i} = ${dan * i}`);
+            }
+        }
+
+        function intro () {
+            alert("안녕하세요");
+            alert("제 이름은 홍길동입니다");
+            alert("잘 부탁드립니다");
+        }
+
+        function 전달받는구구단(dan){
+            for(let i = 1; i <=9; i++) {
+                console.log(`${dan} x ${i} = ${dan * i}`);
+            }
+        }
+
+        // console에 함수이름() 입력하면 실행됨
+        // 함수화 해두면 재사용, 유지보수가 쉽고 눈으로 보기 편하다
+    </script>
+</body>
+</html>

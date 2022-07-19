@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    나이를 입력 받아서
+    1~19세 미성년자
+    20~64세 성인
+    65~100세 노인
+    
+    <script>
+        var age = prompt("몇 살 인가요?");
+
+        if (age < 0) {
+            alert("잘못된 값 입니다");
+        } else if (age < 20) {
+            alert("미성년자");
+        } else if (age < 65) {
+            alert("성인");
+        } else if (age <= 100) {
+            alert("노인");
+        } else {
+            alert("잘못된 값 입니다");
+        }
+    
+    
+        // 조건 순서대로 작성해야함
+
+        // if문은 if부터 else까지 한 덩어리
+        // 조건을 한 번 만족하면 그 아래는 다 무시한다.
+    </script>
+
+</body>
+</html>

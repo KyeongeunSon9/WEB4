@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    조건문 이란?
+
+    조건이 참이면 이렇게 해라
+
+    혹은
+
+    조건이 참일때 이렇게 거짓일때 저렇게
+
+
+    <script>
+    //    if(조건식){
+    //     실행할내용;
+    //    } 
+
+    //    조건식이 참이면 실행할내용을 실행
+
+
+
+    // 노키즈존, 초등학생은 들어올 수 없다.
+
+    kidsAge = prompt("아이가 몇 살 인가요?");
+
+    if ( kidsAge <= 13 ) {
+        alert("노키즈존이라 입장 불가능합니다.");
+    }
+    // 특정 값에 따라 실행시킬지 말지 결정
+
+    if( kidsAge <= 13 ) {
+
+    }else{
+        alert("어서오세요");
+    }
+    // else은 if조건에 맞지 않는 것을 실행
+
+
+
+
+    // 초등학생은 입장 불가한 노키즈존이나, 2세 이하는 입장 가능할 경우
+
+    if( kidsAge <= 2){
+        alert("완전 애기는 입장 가능");
+    }else if ( kidsAge <= 13 ) {
+        alert("노키즈존이라 입장 불가");
+    }
+
+    조건문은 항상 if로 시작
+
+    조건을 추가하려면 else if 이용하면 됨
+
+    else는 생략 가능
+    </script>
+
+
+</body>
+</html>
