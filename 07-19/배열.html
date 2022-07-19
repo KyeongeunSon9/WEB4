@@ -1,88 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html lang="ko">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title></title>
     <style>
-        .active {
-            color: red;
-        }
+      .active {
+        color: red;
+      }
     </style>
-</head>
-<body>
-    <div class="hi active">hihi1</div>
+  </head>
+  <body>
+    <div class="hi">hihi1</div>
     <div class="hi">hihi2</div>
     <div class="hi">hihi3</div>
     <div class="hi">hihi4</div>
     <div class="hi">hihi5</div>
 
     <script>
-        const WEB4수강생1 = '이은빈';
-        const WEB4수강생2 = '김경희';
-        const WEB4수강생3 = '김수완';
+      const WEB4수강생1 = "이은빈";
+      const WEB4수강생2 = "김경희";
+      const WEB4수강생3 = "김수완";
+      // .
+      // .
+      // .
+      const WEB4수강생9 = "김찬율";
+
+      function 출석체크() {
+        console.log(`출석번호 1번은 ${WEB4수강생1}입니다`);
+        console.log(`출석번호 2번은 ${WEB4수강생2}입니다`);
+        console.log(`출석번호 3번은 ${WEB4수강생3}입니다`);
         // .
         // .
         // .
-        const WEB4수강생9 = '김찬율';
+        console.log(`출석번호 9번은 ${WEB4수강생9}입니다`);
+      }
 
-        function 출석체크() {
-            console.log(`출석번호 1번은 ${WEB4수강생1}입니다.`);
+      const WEB4수강생 = [
+        "이은빈",
+        "김경희",
+        "김수완",
+        "임지민",
+        "이다솜",
+        "손경은",
+        "남기쁨",
+        "박도현",
+        "김찬율",
+        "김갑룡",
+      ];
+      // 으로 같은 그룹끼리 정리해서 작성할 수 있음
+
+      function 반복문출석체크() {
+        for (let i = 0; i < WEB4수강생.length; i++) {
+          console.log(`출석번호 ${i + 1}번은 ${WEB4수강생[i]}`);
         }
+      }
 
+      const his = document.getElementsByClassName("hi");
 
-        const WEB4수강생 = {
-            "이은빈",
-            "김경희",
-            "김수완",
-            "임지민",
-            "이다솜",
-            "손경은",
-            "남기쁨",
-            "박도현",
-            "김찬율"
-        };
-        // 으로 같은 그룹끼리 정리해서 작성할 수 있음
+      //   for (let i = 0; i < his.length; i++) {
+      //     his[i].addEventListener("click", () => {
+      //       if (his[i].classList.contains("active")) {
+      //         his[i].classList.remove("active");
+      //       } else {
+      //         his[i].classList.add("active");
+      //       }
+      //     });
+      //   }
+      for (let i = 0; i < his.length; i++) {
+        his[i].addEventListener("click", () => {
+          his[i].classList.toggle("active");
+        });
+      }
+      
+      // WEB4수강생.length 
 
-        function 반복문출석체크() {
-            for (let i = 0; WEB4수강생.length; i++) {
-                console.log(`출석번호 ${i + 1}번은 ${WEB4수강생[i]}`);
-            }
-        }
+      // for(let i = 0; WEB4수강생.length; i++) 반복문에서 자주 쓰이는 형태
+      
+      // 배열 : 같은 상수를 묶는 것
 
-
-
-        const his = document.getElementsByClassName("hi");
-
-        for (let i = 0; i < his.length; i++) {
-            his[i].addEventListener('click',() => {
-                if (his[i].classList.contains('active');) {
-                    his[i].classList.remove('active');
-                }else{
-                    his[i].classList.add('active');
-                }
-            });
-        }
-
-        for (let i = 0; i < his.length; i++) {
-            his[i].addEventListener('click', () => {
-                his[i].classList.toggle('active');
-            });
-        }
-
-
-
-        // WEB4수강생.length 
-
-        // for(let i = 0; WEB4수강생.length; i++) 반복문에서 자주 쓰이는 형태
-        
-        // 배열 : 같은 상수를 묶는 것
-
-        // toggle 속성은 스위치를 껐다 켰다하는 기능과 같음. 클래스리스트를 확인해서 있으면 넣고 없으면 작동안함
-
-        
+      // toggle 속성은 스위치를 껐다 켰다하는 기능과 같음. 클래스리스트를 확인해서 있으면 넣고 없으면 작동안함
     </script>
-
-</body>
+  </body>
 </html>
