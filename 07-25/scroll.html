@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(0deg, #ebebeb, #232323);
+        }
+
+        h2 {
+            margin-bottom: 1000px;
+            transition: 1s;
+        }
+
+        .to-right {
+            transform: translateX(200px);
+            opacity: 0;
+        }
+
+        .container {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- 스크롤에 따라서 나타나기 -->
+
+    <div class="container">
+        <h2 class="sa to-right">안녕하세요</h2>
+        <h2 class="sa to-right">저는 홍길동입니다</h2>
+        <h2 class="sa to-right">나이는 n살이고</h2>
+        <h2 class="sa to-right">웹 퍼블리셔 과정을 공부하고 있습니다</h2>
+        <h2 class="sa to-right">잘 부탁드립니다</h2>  
+    </div>
+
+    <script>
+        const scrollAnimation = document.getElementsByClassName("sa");
+
+        for(let i = 0; i < scrollAnimation.length; i++;)
+            window.addEventListener("scroll", () => {
+                if (
+                    scrollAnimation[i].getBoundingClientRect().top - window.innerHeight < 0) {
+                    scrollAnimation[i].classList.remove("to-right");
+                }
+        })
+    </script>
+    
+</body>
+</html>
