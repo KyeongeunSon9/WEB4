@@ -23,6 +23,7 @@
         .container {
             overflow: hidden;
         }
+
     </style>
 </head>
 <body>
@@ -39,13 +40,19 @@
     <script>
         const scrollAnimation = document.getElementsByClassName("sa");
 
-        for(let i = 0; i < scrollAnimation.length; i++;)
+        for(let i = 0; i < scrollAnimation.length; i++) {
             window.addEventListener("scroll", () => {
                 if (
-                    scrollAnimation[i].getBoundingClientRect().top - window.innerHeight < 0) {
+                    scrollAnimation[i].getBoundingClientRect().top - window.innerHeight < 0)
+                    {
                     scrollAnimation[i].classList.remove("to-right");
+                } else {
+                    scrollAnimation[i].classList.add("to-right");
                 }
-        })
+            });
+        }
+
+        // i++ 뒤에 ; 붙이지않기
     </script>
     
 </body>
